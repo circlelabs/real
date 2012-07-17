@@ -11,9 +11,9 @@ This is the implementation of RIPNA.h.
 #include <algorithm>
 #include <iostream>
 
-#include "repo/ripna.h"
-#include "repo/standardFuncs.h"		// for PI, EARTH_RADIUS, MPS_SPEED
-#include "repo/SimulatedPlane.h"		// for MAXIMUM_TURNING_ANGLE
+#include "real/ripna.h"
+#include "real/standardFuncs.h"		// for PI, EARTH_RADIUS, MPS_SPEED
+#include "real/SimulatedPlane.h"		// for MAXIMUM_TURNING_ANGLE
 
 #define CHATTERING_ANGLE 30.0 //degrees
 #define SECOND_THRESHOLD 1.50*MPS_SPEED //meters
@@ -30,10 +30,10 @@ This is the implementation of RIPNA.h.
 all necessary functions in order to generate the new collision avoidance 
 waypoint. If no collision avoidance maneuvers are necessary, the function
 returns the current destination waypoint. */
-repo::waypoint repo::findNewWaypoint(PlaneObject &plane1, std::map<int, PlaneObject> &planes) {
+real::waypoint real::findNewWaypoint(PlaneObject &plane1, std::map<int, PlaneObject> &planes) {
     
     /* Find plane to avoid*/
-	repo::threatContainer greatestThreat = findGreatestThreat(plane1, planes);
+	real::threatContainer greatestThreat = findGreatestThreat(plane1, planes);
 	
 	/* Unpack plane to avoid*/	
 	int threatID = greatestThreat.planeID;
@@ -60,10 +60,10 @@ repo::waypoint repo::findNewWaypoint(PlaneObject &plane1, std::map<int, PlaneObj
 
 	
 /* Function that returns the ID of the most dangerous neighboring plane and its ZEM. */
-repo::threatContainer repo::findGreatestThreat(PlaneObject &plane1, std::map<int, PlaneObject> &planes) {
+real::threatContainer real::findGreatestThreat(PlaneObject &plane1, std::map<int, PlaneObject> &planes) {
     
 	/* Set reference for origin (Northwest corner of the course)*/
-	repo::coordinate origin;
+	real::coordinate origin;
 	origin.latitude = 32.606573;
 	origin.longitude = -85.490356;
 	origin.altitude = 400;
@@ -88,15 +88,15 @@ repo::threatContainer repo::findGreatestThreat(PlaneObject &plane1, std::map<int
 		plane1.getCurrentLoc().latitude, plane1.getCurrentLoc().longitude);
 	double direction = findAngle(origin.latitude, origin.longitude, 
 		plane1.getCurrentLoc().latitude, plane1.getCurrentLoc().longitude);
-	repo::mathVector p1(magnitude,direction);
+	real::mathVector p1(magnitude,direction);
 
 	/* Make a heading vector representation of the current plane */
-	repo::mathVector d1(1.0,toCartesian(plane1.getCurrentBearing()));
+	real::mathVector d1(1.0,toCartesian(plane1.getCurrentBearing()));
 	
 	/* Declare variables needed for this loop */
-	repo::mathVector pDiff, dDiff;
+	real::mathVector pDiff, dDiff;
 	double timeToGo, zeroEffortMiss, distanceBetween, timeToDest, bearingDiff;
-	std::map<int,repo::PlaneObject>::iterator it;
+	std::map<int,real::PlaneObject>::iterator it;
     
 	for (it=planes.begin() ; it!= planes.end(); it++) {
 		/* Unpacking plane to check */		
@@ -112,10 +112,10 @@ repo::threatContainer repo::findGreatestThreat(PlaneObject &plane1, std::map<int
 			plane2.getCurrentLoc().latitude, plane2.getCurrentLoc().longitude);
 		direction2 = findAngle(origin.latitude, origin.longitude, 
 			plane2.getCurrentLoc().latitude, plane2.getCurrentLoc().longitude);
-		repo::mathVector p2(magnitude2,direction2);
+		real::mathVector p2(magnitude2,direction2);
 
 		/* Make a heading vector representation of the other plane */
-		repo::mathVector d2(1.0,toCartesian(plane2.getCurrentBearing()));
+		real::mathVector d2(1.0,toCartesian(plane2.getCurrentBearing()));
 
 		/* Compute time-to-go */
 		pDiff = p1-p2;
@@ -154,7 +154,7 @@ repo::threatContainer repo::findGreatestThreat(PlaneObject &plane1, std::map<int
 		minimumTimeToGo = timeToGo;
 	}
 
-	repo::threatContainer greatestThreat;
+	real::threatContainer greatestThreat;
 	if (iPlaneToAvoid > -1) {
 		greatestThreat.planeID = iPlaneToAvoid;
 		greatestThreat.ZEM = iMostDangerousZEM;
@@ -172,7 +172,7 @@ repo::threatContainer repo::findGreatestThreat(PlaneObject &plane1, std::map<int
 
 /* Returns true if the original plane (plane1) should turn right to avoid plane2,
 false if otherwise. Takes original plane and its greatest threat as parameters. */
-bool repo::shouldTurnRight(PlaneObject &plane1, PlaneObject &plane2) {
+bool real::shouldTurnRight(PlaneObject &plane1, PlaneObject &plane2) {
 
 	/* For checking whether the plane should turn right or left */
 	double theta, theta_dot, R;
@@ -194,7 +194,7 @@ bool repo::shouldTurnRight(PlaneObject &plane1, PlaneObject &plane2) {
 
 
 /* Calculate the turning radius based on the zero effort miss. */
-double repo::calculateTurningRadius(double ZEM) {
+double real::calculateTurningRadius(double ZEM) {
     
 	double l = LAMBDA;
 	double ds = DESIRED_SEPARATION;
@@ -203,9 +203,9 @@ double repo::calculateTurningRadius(double ZEM) {
 
 
 /* Find the new collision avoidance waypoint for the plane to go to */
-repo::waypoint repo::calculateWaypoint(PlaneObject &plane1, double turningRadius, bool turnRight){
+real::waypoint real::calculateWaypoint(PlaneObject &plane1, double turningRadius, bool turnRight){
 
-	repo::waypoint wp;	
+	real::waypoint wp;	
 	double V = MPS_SPEED;
 	double delta_T = TIME_STEP;	
 	double cartBearing = toCartesian(plane1.getCurrentBearing())* PI/180;
@@ -224,11 +224,11 @@ repo::waypoint repo::calculateWaypoint(PlaneObject &plane1, double turningRadius
 current plane to avoid looping. Returns a waypoint based on calculations. 
 If no maneuvers are necessary, then the function returns the current 
 destination. */
-repo::waypoint repo::takeDubinsPath(PlaneObject &plane1) {
+real::waypoint real::takeDubinsPath(PlaneObject &plane1) {
     
 	/* Initialize variables */
-	repo::coordinate circleCenter;
-	repo::waypoint wp = plane1.getDestination();
+	real::coordinate circleCenter;
+	real::waypoint wp = plane1.getDestination();
 	double minTurningRadius = 0.75*MINIMUM_TURNING_RADIUS;
 	bool destOnRight;
     
@@ -260,9 +260,9 @@ repo::waypoint repo::takeDubinsPath(PlaneObject &plane1) {
 }
 
 /* Returns a coordinate of the center of a circle used to prevent looping. */
-repo::coordinate repo::calculateLoopingCircleCenter(PlaneObject &plane, double turnRadius, bool turnRight) {
+real::coordinate real::calculateLoopingCircleCenter(PlaneObject &plane, double turnRadius, bool turnRight) {
     
-	repo::coordinate circleCenter;
+	real::coordinate circleCenter;
 	circleCenter.altitude = plane.getCurrentLoc().altitude;
 	double angle;
     

@@ -14,17 +14,17 @@ This node controls the collision avoidance algorithm - an implementation of reac
 
 //ROS headers
 #include "ros/ros.h"
-#include "repo/TelemetryUpdate.h"
-#include "repo/GoToWaypoint.h"
-#include "repo/RequestWaypointInfo.h"
-#include "repo/standardDefs.h"
+#include "real/TelemetryUpdate.h"
+#include "real/GoToWaypoint.h"
+#include "real/RequestWaypointInfo.h"
+#include "real/standardDefs.h"
 #include <tf/transform_broadcaster.h>
 #include <visualization_msgs/Marker.h>
 
 //our headers
-#include "repo/planeObject.h"
-#include "repo/standardFuncs.h"
-#include "repo/ripna.h"
+#include "real/planeObject.h"
+#include "real/standardFuncs.h"
+#include "real/ripna.h"
 
 
 #define WEST_MOST_LONGITUDE -85.490356
@@ -45,14 +45,14 @@ ros::ServiceClient requestWaypointInfoClient;
 /* Variables for the number of goToWaypoint services requested, 
 the number of planes in the airspace, and the current planes ID */
 int count;
-std::map<int, repo::PlaneObject> planes; /* map of planes in the airspace.  The key is the plane id of the aircraft */
+std::map<int, real::PlaneObject> planes; /* map of planes in the airspace.  The key is the plane id of the aircraft */
 
 /* This function is run every time new telemetry information from any plane is recieved. With the new telemetry update, 
 information about the plane is updated, including bearing, speed, current location, etc. Additionally, we check to see
 if the UAV has reached its current destination, and, if so, update the destination of the UAV. After updating, the
 calculateForces function is called to find a the new force acting on the UAV; from this new force, a next waypoint is
 generated and forwarded to the coordinator. */
-void telemetryCallback(const repo::TelemetryUpdate::ConstPtr &msg);
+void telemetryCallback(const real::TelemetryUpdate::ConstPtr &msg);
 
 int main(int argc, char **argv) {	
 	//standard ROS startup
@@ -61,8 +61,8 @@ int main(int argc, char **argv) {
 	
 	/* Subscribe to telemetry outputs and create clients for the goToWaypoint and requestWaypointInfo services. */
 	ros::Subscriber sub = n.subscribe("telemetry", 1000, telemetryCallback);
-	goToWaypointClient = n.serviceClient<repo::GoToWaypoint>("go_to_waypoint");
-	requestWaypointInfoClient = n.serviceClient<repo::RequestWaypointInfo>("request_waypoint_info");
+	goToWaypointClient = n.serviceClient<real::GoToWaypoint>("go_to_waypoint");
+	requestWaypointInfoClient = n.serviceClient<real::RequestWaypointInfo>("request_waypoint_info");
 
 	//initialize counting
 	count = 0;	
@@ -73,13 +73,13 @@ int main(int argc, char **argv) {
 	return 0;
 }
 
-void telemetryCallback(const repo::TelemetryUpdate::ConstPtr &msg) {	
+void telemetryCallback(const real::TelemetryUpdate::ConstPtr &msg) {	
 	int planeID = msg->planeID;
 
 	/* Instantiate services and get planeID. */
-	repo::GoToWaypoint goToWaypointSrv;
-	repo::GoToWaypoint goToWaypointSrv2;
-	repo::RequestWaypointInfo requestWaypointInfoSrv;
+	real::GoToWaypoint goToWaypointSrv;
+	real::GoToWaypoint goToWaypointSrv2;
+	real::RequestWaypointInfo requestWaypointInfoSrv;
 	
 
 	/* Request this plane's current normal destination. */
@@ -111,11 +111,11 @@ void telemetryCallback(const repo::TelemetryUpdate::ConstPtr &msg) {
 	/* If the plane is not in our map of planes and has destination waypoints, then add it as a new plane to our map of planes. */
 	if (planes.find(planeID) == planes.end() && msg->currentWaypointIndex != -1){ 
 		/* This is a new plane, so create a new planeObject and give it the appropriate information. */
-		repo::PlaneObject newPlane(MPS_SPEED, *msg); 
+		real::PlaneObject newPlane(MPS_SPEED, *msg); 
 		planes[planeID] = newPlane; //put the new plane in the map
 
 		/* Update the destination of the PlaneObject with the value found with the requestWaypointInfoSrv call. */
-		repo::waypoint newDest; 
+		real::waypoint newDest; 
 		newDest.latitude = requestWaypointInfoSrv.response.latitude;
 		newDest.longitude = requestWaypointInfoSrv.response.longitude;
 		newDest.altitude = requestWaypointInfoSrv.response.altitude;
@@ -144,7 +144,7 @@ void telemetryCallback(const repo::TelemetryUpdate::ConstPtr &msg) {
     requestWaypointInfoSrv response. */
 	else {
 		planes[planeID].update(*msg); //update plane with new position
-		repo::waypoint newDest;
+		real::waypoint newDest;
 
 		newDest.latitude = requestWaypointInfoSrv.response.latitude;
 		newDest.longitude = requestWaypointInfoSrv.response.longitude;
@@ -155,7 +155,7 @@ void telemetryCallback(const repo::TelemetryUpdate::ConstPtr &msg) {
 
     /* This code calls the collision avoidance algorithm and determines if collision avoidance maneuvers should be
     taken. Returns a waypoint for the plane to go to. */	
-    repo::waypoint newWaypoint = findNewWaypoint(planes[planeID], planes);
+    real::waypoint newWaypoint = findNewWaypoint(planes[planeID], planes);
 
     if (planes[planeID].getDestination().latitude == newWaypont.latitude &&
         planes[planeID].getDestination().longitude == newWaypont.longitude) continue;
