@@ -1,2 +1,1 @@
-real
-====
+This repository contains a version of our Inverse Proportional Navigation Algorithm; it is optimized for real world usage.
