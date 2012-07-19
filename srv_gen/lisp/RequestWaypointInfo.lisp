@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package sim-srv)
+(cl:in-package real-srv)
 
 
 ;//! \htmlinclude RequestWaypointInfo-request.msg.html
@@ -30,21 +30,21 @@
 (cl:defmethod cl:initialize-instance :after ((m <RequestWaypointInfo-request>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'RequestWaypointInfo-request)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<RequestWaypointInfo-request> is deprecated: use sim-srv:RequestWaypointInfo-request instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<RequestWaypointInfo-request> is deprecated: use real-srv:RequestWaypointInfo-request instead.")))
 
 (cl:ensure-generic-function 'planeID-val :lambda-list '(m))
 (cl:defmethod planeID-val ((m <RequestWaypointInfo-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:planeID-val is deprecated.  Use sim-srv:planeID instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:planeID-val is deprecated.  Use real-srv:planeID instead.")
   (planeID m))
 
 (cl:ensure-generic-function 'isAvoidanceWaypoint-val :lambda-list '(m))
 (cl:defmethod isAvoidanceWaypoint-val ((m <RequestWaypointInfo-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:isAvoidanceWaypoint-val is deprecated.  Use sim-srv:isAvoidanceWaypoint instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:isAvoidanceWaypoint-val is deprecated.  Use real-srv:isAvoidanceWaypoint instead.")
   (isAvoidanceWaypoint m))
 
 (cl:ensure-generic-function 'positionInQueue-val :lambda-list '(m))
 (cl:defmethod positionInQueue-val ((m <RequestWaypointInfo-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:positionInQueue-val is deprecated.  Use sim-srv:positionInQueue instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:positionInQueue-val is deprecated.  Use real-srv:positionInQueue instead.")
   (positionInQueue m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <RequestWaypointInfo-request>) ostream)
   "Serializes a message object of type '<RequestWaypointInfo-request>"
@@ -73,10 +73,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<RequestWaypointInfo-request>)))
   "Returns string type for a service object of type '<RequestWaypointInfo-request>"
-  "sim/RequestWaypointInfoRequest")
+  "real/RequestWaypointInfoRequest")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'RequestWaypointInfo-request)))
   "Returns string type for a service object of type 'RequestWaypointInfo-request"
-  "sim/RequestWaypointInfoRequest")
+  "real/RequestWaypointInfoRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<RequestWaypointInfo-request>)))
   "Returns md5sum for a message object of type '<RequestWaypointInfo-request>"
   "db9e3801b1da39b7fbc4397b931e6587")
@@ -133,26 +133,26 @@
 (cl:defmethod cl:initialize-instance :after ((m <RequestWaypointInfo-response>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'RequestWaypointInfo-response)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<RequestWaypointInfo-response> is deprecated: use sim-srv:RequestWaypointInfo-response instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<RequestWaypointInfo-response> is deprecated: use real-srv:RequestWaypointInfo-response instead.")))
 
 (cl:ensure-generic-function 'error-val :lambda-list '(m))
 (cl:defmethod error-val ((m <RequestWaypointInfo-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:error-val is deprecated.  Use sim-srv:error instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:error-val is deprecated.  Use real-srv:error instead.")
   (error m))
 
 (cl:ensure-generic-function 'latitude-val :lambda-list '(m))
 (cl:defmethod latitude-val ((m <RequestWaypointInfo-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:latitude-val is deprecated.  Use sim-srv:latitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:latitude-val is deprecated.  Use real-srv:latitude instead.")
   (latitude m))
 
 (cl:ensure-generic-function 'longitude-val :lambda-list '(m))
 (cl:defmethod longitude-val ((m <RequestWaypointInfo-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:longitude-val is deprecated.  Use sim-srv:longitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:longitude-val is deprecated.  Use real-srv:longitude instead.")
   (longitude m))
 
 (cl:ensure-generic-function 'altitude-val :lambda-list '(m))
 (cl:defmethod altitude-val ((m <RequestWaypointInfo-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:altitude-val is deprecated.  Use sim-srv:altitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:altitude-val is deprecated.  Use real-srv:altitude instead.")
   (altitude m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <RequestWaypointInfo-response>) ostream)
   "Serializes a message object of type '<RequestWaypointInfo-response>"
@@ -234,10 +234,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<RequestWaypointInfo-response>)))
   "Returns string type for a service object of type '<RequestWaypointInfo-response>"
-  "sim/RequestWaypointInfoResponse")
+  "real/RequestWaypointInfoResponse")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'RequestWaypointInfo-response)))
   "Returns string type for a service object of type 'RequestWaypointInfo-response"
-  "sim/RequestWaypointInfoResponse")
+  "real/RequestWaypointInfoResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<RequestWaypointInfo-response>)))
   "Returns md5sum for a message object of type '<RequestWaypointInfo-response>"
   "db9e3801b1da39b7fbc4397b931e6587")
@@ -271,4 +271,4 @@
   'RequestWaypointInfo-response)
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'RequestWaypointInfo)))
   "Returns string type for a service object of type '<RequestWaypointInfo>"
-  "sim/RequestWaypointInfo")
+  "real/RequestWaypointInfo")

@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/eric/ros_workspace/sim
+CMAKE_SOURCE_DIR = /home/eric/ros_workspace/real
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/eric/ros_workspace/sim
+CMAKE_BINARY_DIR = /home/eric/ros_workspace/real
 
 # Utility rule file for test-results.
 
@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /home/eric/ros_workspace/sim
 include CMakeFiles/test-results.dir/progress.make
 
 CMakeFiles/test-results:
-	/opt/ros/fuerte/share/rosunit/bin/summarize_results.py --nodeps sim
+	/opt/ros/fuerte/share/rosunit/bin/summarize_results.py --nodeps real
 
 test-results: CMakeFiles/test-results
 test-results: CMakeFiles/test-results.dir/build.make
@@ -58,6 +58,6 @@ CMakeFiles/test-results.dir/clean:
 .PHONY : CMakeFiles/test-results.dir/clean
 
 CMakeFiles/test-results.dir/depend:
-	cd /home/eric/ros_workspace/sim && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/eric/ros_workspace/sim /home/eric/ros_workspace/sim /home/eric/ros_workspace/sim /home/eric/ros_workspace/sim /home/eric/ros_workspace/sim/CMakeFiles/test-results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/eric/ros_workspace/real && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/eric/ros_workspace/real /home/eric/ros_workspace/real /home/eric/ros_workspace/real /home/eric/ros_workspace/real /home/eric/ros_workspace/real/CMakeFiles/test-results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test-results.dir/depend
 

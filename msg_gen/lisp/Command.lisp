@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package sim-msg)
+(cl:in-package real-msg)
 
 
 ;//! \htmlinclude Command.msg.html
@@ -40,31 +40,31 @@
 (cl:defmethod cl:initialize-instance :after ((m <Command>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'Command)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-msg:<Command> is deprecated: use sim-msg:Command instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-msg:<Command> is deprecated: use real-msg:Command instead.")))
 
 (cl:ensure-generic-function 'commandHeader-val :lambda-list '(m))
 (cl:defmethod commandHeader-val ((m <Command>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:commandHeader-val is deprecated.  Use sim-msg:commandHeader instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:commandHeader-val is deprecated.  Use real-msg:commandHeader instead.")
   (commandHeader m))
 
 (cl:ensure-generic-function 'planeID-val :lambda-list '(m))
 (cl:defmethod planeID-val ((m <Command>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:planeID-val is deprecated.  Use sim-msg:planeID instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:planeID-val is deprecated.  Use real-msg:planeID instead.")
   (planeID m))
 
 (cl:ensure-generic-function 'latitude-val :lambda-list '(m))
 (cl:defmethod latitude-val ((m <Command>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:latitude-val is deprecated.  Use sim-msg:latitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:latitude-val is deprecated.  Use real-msg:latitude instead.")
   (latitude m))
 
 (cl:ensure-generic-function 'longitude-val :lambda-list '(m))
 (cl:defmethod longitude-val ((m <Command>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:longitude-val is deprecated.  Use sim-msg:longitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:longitude-val is deprecated.  Use real-msg:longitude instead.")
   (longitude m))
 
 (cl:ensure-generic-function 'altitude-val :lambda-list '(m))
 (cl:defmethod altitude-val ((m <Command>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:altitude-val is deprecated.  Use sim-msg:altitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:altitude-val is deprecated.  Use real-msg:altitude instead.")
   (altitude m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <Command>) ostream)
   "Serializes a message object of type '<Command>"
@@ -142,10 +142,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<Command>)))
   "Returns string type for a message object of type '<Command>"
-  "sim/Command")
+  "real/Command")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'Command)))
   "Returns string type for a message object of type 'Command"
-  "sim/Command")
+  "real/Command")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Command>)))
   "Returns md5sum for a message object of type '<Command>"
   "c53c94d81a0a5526e6ff4317b73721aa")

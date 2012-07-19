@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/eric/ros_workspace/sim/src/KMLCreator.cpp
+/home/eric/ros_workspace/real/src/KMLCreator.cpp
 stdio.h
 -
 map
@@ -14,15 +14,15 @@ map
 queue
 -
 ros/ros.h
-/home/eric/ros_workspace/sim/src/ros/ros.h
+/home/eric/ros_workspace/real/src/ros/ros.h
 ros/package.h
-/home/eric/ros_workspace/sim/src/ros/package.h
-sim/standardDefs.h
-/home/eric/ros_workspace/sim/src/sim/standardDefs.h
-sim/TelemetryUpdate.h
-/home/eric/ros_workspace/sim/src/sim/TelemetryUpdate.h
-sim/SaveFlightData.h
-/home/eric/ros_workspace/sim/src/sim/SaveFlightData.h
+/home/eric/ros_workspace/real/src/ros/package.h
+real/standardDefs.h
+/home/eric/ros_workspace/real/src/real/standardDefs.h
+real/TelemetryUpdate.h
+/home/eric/ros_workspace/real/src/real/TelemetryUpdate.h
+real/SaveFlightData.h
+/home/eric/ros_workspace/real/src/real/SaveFlightData.h
 
 /opt/ros/fuerte/include/XmlRpcDecl.h
 ros/macros.h
@@ -658,11 +658,11 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-include/sim/standardDefs.h
+include/real/standardDefs.h
 math.h
 -
 
-msg_gen/cpp/include/sim/TelemetryUpdate.h
+msg_gen/cpp/include/real/TelemetryUpdate.h
 string
 -
 vector
@@ -672,21 +672,21 @@ map
 ostream
 -
 ros/serialization.h
-msg_gen/cpp/include/sim/ros/serialization.h
+msg_gen/cpp/include/real/ros/serialization.h
 ros/builtin_message_traits.h
-msg_gen/cpp/include/sim/ros/builtin_message_traits.h
+msg_gen/cpp/include/real/ros/builtin_message_traits.h
 ros/message_operations.h
-msg_gen/cpp/include/sim/ros/message_operations.h
+msg_gen/cpp/include/real/ros/message_operations.h
 ros/time.h
-msg_gen/cpp/include/sim/ros/time.h
+msg_gen/cpp/include/real/ros/time.h
 ros/macros.h
-msg_gen/cpp/include/sim/ros/macros.h
+msg_gen/cpp/include/real/ros/macros.h
 ros/assert.h
-msg_gen/cpp/include/sim/ros/assert.h
+msg_gen/cpp/include/real/ros/assert.h
 std_msgs/Header.h
-msg_gen/cpp/include/sim/std_msgs/Header.h
+msg_gen/cpp/include/real/std_msgs/Header.h
 
-srv_gen/cpp/include/sim/SaveFlightData.h
+srv_gen/cpp/include/real/SaveFlightData.h
 string
 -
 vector
@@ -696,17 +696,17 @@ map
 ostream
 -
 ros/serialization.h
-srv_gen/cpp/include/sim/ros/serialization.h
+srv_gen/cpp/include/real/ros/serialization.h
 ros/builtin_message_traits.h
-srv_gen/cpp/include/sim/ros/builtin_message_traits.h
+srv_gen/cpp/include/real/ros/builtin_message_traits.h
 ros/message_operations.h
-srv_gen/cpp/include/sim/ros/message_operations.h
+srv_gen/cpp/include/real/ros/message_operations.h
 ros/time.h
-srv_gen/cpp/include/sim/ros/time.h
+srv_gen/cpp/include/real/ros/time.h
 ros/macros.h
-srv_gen/cpp/include/sim/ros/macros.h
+srv_gen/cpp/include/real/ros/macros.h
 ros/assert.h
-srv_gen/cpp/include/sim/ros/assert.h
+srv_gen/cpp/include/real/ros/assert.h
 ros/service_traits.h
-srv_gen/cpp/include/sim/ros/service_traits.h
+srv_gen/cpp/include/real/ros/service_traits.h
 

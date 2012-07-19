@@ -58,7 +58,7 @@ CMakeFiles/KMLCreator.dir/src/KMLCreator.o: /opt/ros/fuerte/include/ros/wall_tim
 CMakeFiles/KMLCreator.dir/src/KMLCreator.o: /opt/ros/fuerte/include/ros/wall_timer_options.h
 CMakeFiles/KMLCreator.dir/src/KMLCreator.o: /opt/ros/fuerte/include/rosconsole/macros_generated.h
 CMakeFiles/KMLCreator.dir/src/KMLCreator.o: /opt/ros/fuerte/include/std_msgs/Header.h
-CMakeFiles/KMLCreator.dir/src/KMLCreator.o: include/sim/standardDefs.h
-CMakeFiles/KMLCreator.dir/src/KMLCreator.o: msg_gen/cpp/include/sim/TelemetryUpdate.h
-CMakeFiles/KMLCreator.dir/src/KMLCreator.o: srv_gen/cpp/include/sim/SaveFlightData.h
+CMakeFiles/KMLCreator.dir/src/KMLCreator.o: include/real/standardDefs.h
+CMakeFiles/KMLCreator.dir/src/KMLCreator.o: msg_gen/cpp/include/real/TelemetryUpdate.h
+CMakeFiles/KMLCreator.dir/src/KMLCreator.o: srv_gen/cpp/include/real/SaveFlightData.h
 

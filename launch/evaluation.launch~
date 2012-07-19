@@ -1,0 +1,8 @@
+<launch>
+
+	<node name="collisionAvoidance" pkg="real" type="collisionAvoidance"/>
+	<node name="coordinator" pkg="real" type="coordinator"/>
+	<node name="KMLCreator" pkg="real" type="KMLCreator" output="screen" />
+	<node name="simulator" pkg="real" type="simulator" />
+	<node name="evaluator" pkg="real" type="evaluator" output="screen" />
+</launch>

@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package sim-srv)
+(cl:in-package real-srv)
 
 
 ;//! \htmlinclude GoToWaypoint-request.msg.html
@@ -45,36 +45,36 @@
 (cl:defmethod cl:initialize-instance :after ((m <GoToWaypoint-request>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'GoToWaypoint-request)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<GoToWaypoint-request> is deprecated: use sim-srv:GoToWaypoint-request instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<GoToWaypoint-request> is deprecated: use real-srv:GoToWaypoint-request instead.")))
 
 (cl:ensure-generic-function 'planeID-val :lambda-list '(m))
 (cl:defmethod planeID-val ((m <GoToWaypoint-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:planeID-val is deprecated.  Use sim-srv:planeID instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:planeID-val is deprecated.  Use real-srv:planeID instead.")
   (planeID m))
 
 (cl:ensure-generic-function 'latitude-val :lambda-list '(m))
 (cl:defmethod latitude-val ((m <GoToWaypoint-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:latitude-val is deprecated.  Use sim-srv:latitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:latitude-val is deprecated.  Use real-srv:latitude instead.")
   (latitude m))
 
 (cl:ensure-generic-function 'longitude-val :lambda-list '(m))
 (cl:defmethod longitude-val ((m <GoToWaypoint-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:longitude-val is deprecated.  Use sim-srv:longitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:longitude-val is deprecated.  Use real-srv:longitude instead.")
   (longitude m))
 
 (cl:ensure-generic-function 'altitude-val :lambda-list '(m))
 (cl:defmethod altitude-val ((m <GoToWaypoint-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:altitude-val is deprecated.  Use sim-srv:altitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:altitude-val is deprecated.  Use real-srv:altitude instead.")
   (altitude m))
 
 (cl:ensure-generic-function 'isAvoidanceManeuver-val :lambda-list '(m))
 (cl:defmethod isAvoidanceManeuver-val ((m <GoToWaypoint-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:isAvoidanceManeuver-val is deprecated.  Use sim-srv:isAvoidanceManeuver instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:isAvoidanceManeuver-val is deprecated.  Use real-srv:isAvoidanceManeuver instead.")
   (isAvoidanceManeuver m))
 
 (cl:ensure-generic-function 'isNewQueue-val :lambda-list '(m))
 (cl:defmethod isNewQueue-val ((m <GoToWaypoint-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:isNewQueue-val is deprecated.  Use sim-srv:isNewQueue instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:isNewQueue-val is deprecated.  Use real-srv:isNewQueue instead.")
   (isNewQueue m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <GoToWaypoint-request>) ostream)
   "Serializes a message object of type '<GoToWaypoint-request>"
@@ -154,10 +154,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<GoToWaypoint-request>)))
   "Returns string type for a service object of type '<GoToWaypoint-request>"
-  "sim/GoToWaypointRequest")
+  "real/GoToWaypointRequest")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'GoToWaypoint-request)))
   "Returns string type for a service object of type 'GoToWaypoint-request"
-  "sim/GoToWaypointRequest")
+  "real/GoToWaypointRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<GoToWaypoint-request>)))
   "Returns md5sum for a message object of type '<GoToWaypoint-request>"
   "c8cfaca8efcd99e3add29323eb5d2746")
@@ -205,11 +205,11 @@
 (cl:defmethod cl:initialize-instance :after ((m <GoToWaypoint-response>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'GoToWaypoint-response)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<GoToWaypoint-response> is deprecated: use sim-srv:GoToWaypoint-response instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<GoToWaypoint-response> is deprecated: use real-srv:GoToWaypoint-response instead.")))
 
 (cl:ensure-generic-function 'error-val :lambda-list '(m))
 (cl:defmethod error-val ((m <GoToWaypoint-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:error-val is deprecated.  Use sim-srv:error instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:error-val is deprecated.  Use real-srv:error instead.")
   (error m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <GoToWaypoint-response>) ostream)
   "Serializes a message object of type '<GoToWaypoint-response>"
@@ -234,10 +234,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<GoToWaypoint-response>)))
   "Returns string type for a service object of type '<GoToWaypoint-response>"
-  "sim/GoToWaypointResponse")
+  "real/GoToWaypointResponse")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'GoToWaypoint-response)))
   "Returns string type for a service object of type 'GoToWaypoint-response"
-  "sim/GoToWaypointResponse")
+  "real/GoToWaypointResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<GoToWaypoint-response>)))
   "Returns md5sum for a message object of type '<GoToWaypoint-response>"
   "c8cfaca8efcd99e3add29323eb5d2746")
@@ -265,4 +265,4 @@
   'GoToWaypoint-response)
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'GoToWaypoint)))
   "Returns string type for a service object of type '<GoToWaypoint>"
-  "sim/GoToWaypoint")
+  "real/GoToWaypoint")

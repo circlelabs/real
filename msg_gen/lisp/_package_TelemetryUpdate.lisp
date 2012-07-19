@@ -1,4 +1,4 @@
-(cl:in-package sim-msg)
+(cl:in-package real-msg)
 (cl:export '(TELEMETRYHEADER-VAL
           TELEMETRYHEADER
           PLANEID-VAL

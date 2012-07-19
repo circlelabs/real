@@ -1,13 +1,13 @@
 FILE(REMOVE_RECURSE
-  "src/sim/msg"
-  "src/sim/srv"
+  "src/real/msg"
+  "src/real/srv"
   "msg_gen"
   "srv_gen"
   "msg_gen"
   "srv_gen"
   "CMakeFiles/ROSBUILD_genmsg_cpp"
-  "msg_gen/cpp/include/sim/Command.h"
-  "msg_gen/cpp/include/sim/TelemetryUpdate.h"
+  "msg_gen/cpp/include/real/Command.h"
+  "msg_gen/cpp/include/real/TelemetryUpdate.h"
 )
 
 # Per-language clean rules from dependency scanning.

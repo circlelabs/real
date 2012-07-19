@@ -1,4 +1,4 @@
-(cl:in-package sim-srv)
+(cl:in-package real-srv)
 (cl:export '(PLANEID-VAL
           PLANEID
           LATITUDE-VAL

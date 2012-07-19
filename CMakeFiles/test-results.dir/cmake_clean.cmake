@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
-  "src/sim/msg"
-  "src/sim/srv"
+  "src/real/msg"
+  "src/real/srv"
   "msg_gen"
   "srv_gen"
   "msg_gen"

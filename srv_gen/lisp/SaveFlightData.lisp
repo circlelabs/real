@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package sim-srv)
+(cl:in-package real-srv)
 
 
 ;//! \htmlinclude SaveFlightData-request.msg.html
@@ -20,11 +20,11 @@
 (cl:defmethod cl:initialize-instance :after ((m <SaveFlightData-request>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'SaveFlightData-request)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<SaveFlightData-request> is deprecated: use sim-srv:SaveFlightData-request instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<SaveFlightData-request> is deprecated: use real-srv:SaveFlightData-request instead.")))
 
 (cl:ensure-generic-function 'filename-val :lambda-list '(m))
 (cl:defmethod filename-val ((m <SaveFlightData-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:filename-val is deprecated.  Use sim-srv:filename instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:filename-val is deprecated.  Use real-srv:filename instead.")
   (filename m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <SaveFlightData-request>) ostream)
   "Serializes a message object of type '<SaveFlightData-request>"
@@ -49,10 +49,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<SaveFlightData-request>)))
   "Returns string type for a service object of type '<SaveFlightData-request>"
-  "sim/SaveFlightDataRequest")
+  "real/SaveFlightDataRequest")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'SaveFlightData-request)))
   "Returns string type for a service object of type 'SaveFlightData-request"
-  "sim/SaveFlightDataRequest")
+  "real/SaveFlightDataRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<SaveFlightData-request>)))
   "Returns md5sum for a message object of type '<SaveFlightData-request>"
   "fe8131f61ada79495e0d839037fe5bd9")
@@ -90,11 +90,11 @@
 (cl:defmethod cl:initialize-instance :after ((m <SaveFlightData-response>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'SaveFlightData-response)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<SaveFlightData-response> is deprecated: use sim-srv:SaveFlightData-response instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<SaveFlightData-response> is deprecated: use real-srv:SaveFlightData-response instead.")))
 
 (cl:ensure-generic-function 'error-val :lambda-list '(m))
 (cl:defmethod error-val ((m <SaveFlightData-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:error-val is deprecated.  Use sim-srv:error instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:error-val is deprecated.  Use real-srv:error instead.")
   (error m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <SaveFlightData-response>) ostream)
   "Serializes a message object of type '<SaveFlightData-response>"
@@ -119,10 +119,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<SaveFlightData-response>)))
   "Returns string type for a service object of type '<SaveFlightData-response>"
-  "sim/SaveFlightDataResponse")
+  "real/SaveFlightDataResponse")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'SaveFlightData-response)))
   "Returns string type for a service object of type 'SaveFlightData-response"
-  "sim/SaveFlightDataResponse")
+  "real/SaveFlightDataResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<SaveFlightData-response>)))
   "Returns md5sum for a message object of type '<SaveFlightData-response>"
   "fe8131f61ada79495e0d839037fe5bd9")
@@ -150,4 +150,4 @@
   'SaveFlightData-response)
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'SaveFlightData)))
   "Returns string type for a service object of type '<SaveFlightData>"
-  "sim/SaveFlightData")
+  "real/SaveFlightData")

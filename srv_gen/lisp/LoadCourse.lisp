@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package sim-srv)
+(cl:in-package real-srv)
 
 
 ;//! \htmlinclude LoadCourse-request.msg.html
@@ -20,11 +20,11 @@
 (cl:defmethod cl:initialize-instance :after ((m <LoadCourse-request>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'LoadCourse-request)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<LoadCourse-request> is deprecated: use sim-srv:LoadCourse-request instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<LoadCourse-request> is deprecated: use real-srv:LoadCourse-request instead.")))
 
 (cl:ensure-generic-function 'filename-val :lambda-list '(m))
 (cl:defmethod filename-val ((m <LoadCourse-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:filename-val is deprecated.  Use sim-srv:filename instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:filename-val is deprecated.  Use real-srv:filename instead.")
   (filename m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <LoadCourse-request>) ostream)
   "Serializes a message object of type '<LoadCourse-request>"
@@ -49,10 +49,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<LoadCourse-request>)))
   "Returns string type for a service object of type '<LoadCourse-request>"
-  "sim/LoadCourseRequest")
+  "real/LoadCourseRequest")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'LoadCourse-request)))
   "Returns string type for a service object of type 'LoadCourse-request"
-  "sim/LoadCourseRequest")
+  "real/LoadCourseRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<LoadCourse-request>)))
   "Returns md5sum for a message object of type '<LoadCourse-request>"
   "fe8131f61ada79495e0d839037fe5bd9")
@@ -90,11 +90,11 @@
 (cl:defmethod cl:initialize-instance :after ((m <LoadCourse-response>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'LoadCourse-response)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<LoadCourse-response> is deprecated: use sim-srv:LoadCourse-response instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<LoadCourse-response> is deprecated: use real-srv:LoadCourse-response instead.")))
 
 (cl:ensure-generic-function 'error-val :lambda-list '(m))
 (cl:defmethod error-val ((m <LoadCourse-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:error-val is deprecated.  Use sim-srv:error instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:error-val is deprecated.  Use real-srv:error instead.")
   (error m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <LoadCourse-response>) ostream)
   "Serializes a message object of type '<LoadCourse-response>"
@@ -119,10 +119,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<LoadCourse-response>)))
   "Returns string type for a service object of type '<LoadCourse-response>"
-  "sim/LoadCourseResponse")
+  "real/LoadCourseResponse")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'LoadCourse-response)))
   "Returns string type for a service object of type 'LoadCourse-response"
-  "sim/LoadCourseResponse")
+  "real/LoadCourseResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<LoadCourse-response>)))
   "Returns md5sum for a message object of type '<LoadCourse-response>"
   "fe8131f61ada79495e0d839037fe5bd9")
@@ -150,4 +150,4 @@
   'LoadCourse-response)
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'LoadCourse)))
   "Returns string type for a service object of type '<LoadCourse>"
-  "sim/LoadCourse")
+  "real/LoadCourse")

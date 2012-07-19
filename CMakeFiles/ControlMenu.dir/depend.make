@@ -57,14 +57,14 @@ CMakeFiles/ControlMenu.dir/src/ControlMenu.o: /opt/ros/fuerte/include/ros/types.
 CMakeFiles/ControlMenu.dir/src/ControlMenu.o: /opt/ros/fuerte/include/ros/wall_timer.h
 CMakeFiles/ControlMenu.dir/src/ControlMenu.o: /opt/ros/fuerte/include/ros/wall_timer_options.h
 CMakeFiles/ControlMenu.dir/src/ControlMenu.o: /opt/ros/fuerte/include/rosconsole/macros_generated.h
-CMakeFiles/ControlMenu.dir/src/ControlMenu.o: include/sim/standardDefs.h
-CMakeFiles/ControlMenu.dir/src/ControlMenu.o: srv_gen/cpp/include/sim/CreateSimulatedPlane.h
-CMakeFiles/ControlMenu.dir/src/ControlMenu.o: srv_gen/cpp/include/sim/DeleteSimulatedPlane.h
-CMakeFiles/ControlMenu.dir/src/ControlMenu.o: srv_gen/cpp/include/sim/GoToWaypoint.h
-CMakeFiles/ControlMenu.dir/src/ControlMenu.o: srv_gen/cpp/include/sim/LoadCourse.h
-CMakeFiles/ControlMenu.dir/src/ControlMenu.o: srv_gen/cpp/include/sim/LoadPath.h
-CMakeFiles/ControlMenu.dir/src/ControlMenu.o: srv_gen/cpp/include/sim/SaveFlightData.h
+CMakeFiles/ControlMenu.dir/src/ControlMenu.o: include/real/standardDefs.h
+CMakeFiles/ControlMenu.dir/src/ControlMenu.o: srv_gen/cpp/include/real/CreateSimulatedPlane.h
+CMakeFiles/ControlMenu.dir/src/ControlMenu.o: srv_gen/cpp/include/real/DeleteSimulatedPlane.h
+CMakeFiles/ControlMenu.dir/src/ControlMenu.o: srv_gen/cpp/include/real/GoToWaypoint.h
+CMakeFiles/ControlMenu.dir/src/ControlMenu.o: srv_gen/cpp/include/real/LoadCourse.h
+CMakeFiles/ControlMenu.dir/src/ControlMenu.o: srv_gen/cpp/include/real/LoadPath.h
+CMakeFiles/ControlMenu.dir/src/ControlMenu.o: srv_gen/cpp/include/real/SaveFlightData.h
 
-CMakeFiles/ControlMenu.dir/src/sim/standardDefs.o: src/sim/standardDefs.cpp
-CMakeFiles/ControlMenu.dir/src/sim/standardDefs.o: include/sim/standardDefs.h
+CMakeFiles/ControlMenu.dir/src/real/standardDefs.o: src/real/standardDefs.cpp
+CMakeFiles/ControlMenu.dir/src/real/standardDefs.o: include/real/standardDefs.h
 

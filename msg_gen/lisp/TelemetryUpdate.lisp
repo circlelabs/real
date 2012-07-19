@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package sim-msg)
+(cl:in-package real-msg)
 
 
 ;//! \htmlinclude TelemetryUpdate.msg.html
@@ -75,66 +75,66 @@
 (cl:defmethod cl:initialize-instance :after ((m <TelemetryUpdate>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'TelemetryUpdate)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-msg:<TelemetryUpdate> is deprecated: use sim-msg:TelemetryUpdate instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-msg:<TelemetryUpdate> is deprecated: use real-msg:TelemetryUpdate instead.")))
 
 (cl:ensure-generic-function 'telemetryHeader-val :lambda-list '(m))
 (cl:defmethod telemetryHeader-val ((m <TelemetryUpdate>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:telemetryHeader-val is deprecated.  Use sim-msg:telemetryHeader instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:telemetryHeader-val is deprecated.  Use real-msg:telemetryHeader instead.")
   (telemetryHeader m))
 
 (cl:ensure-generic-function 'planeID-val :lambda-list '(m))
 (cl:defmethod planeID-val ((m <TelemetryUpdate>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:planeID-val is deprecated.  Use sim-msg:planeID instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:planeID-val is deprecated.  Use real-msg:planeID instead.")
   (planeID m))
 
 (cl:ensure-generic-function 'currentLatitude-val :lambda-list '(m))
 (cl:defmethod currentLatitude-val ((m <TelemetryUpdate>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:currentLatitude-val is deprecated.  Use sim-msg:currentLatitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:currentLatitude-val is deprecated.  Use real-msg:currentLatitude instead.")
   (currentLatitude m))
 
 (cl:ensure-generic-function 'currentLongitude-val :lambda-list '(m))
 (cl:defmethod currentLongitude-val ((m <TelemetryUpdate>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:currentLongitude-val is deprecated.  Use sim-msg:currentLongitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:currentLongitude-val is deprecated.  Use real-msg:currentLongitude instead.")
   (currentLongitude m))
 
 (cl:ensure-generic-function 'currentAltitude-val :lambda-list '(m))
 (cl:defmethod currentAltitude-val ((m <TelemetryUpdate>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:currentAltitude-val is deprecated.  Use sim-msg:currentAltitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:currentAltitude-val is deprecated.  Use real-msg:currentAltitude instead.")
   (currentAltitude m))
 
 (cl:ensure-generic-function 'destLatitude-val :lambda-list '(m))
 (cl:defmethod destLatitude-val ((m <TelemetryUpdate>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:destLatitude-val is deprecated.  Use sim-msg:destLatitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:destLatitude-val is deprecated.  Use real-msg:destLatitude instead.")
   (destLatitude m))
 
 (cl:ensure-generic-function 'destLongitude-val :lambda-list '(m))
 (cl:defmethod destLongitude-val ((m <TelemetryUpdate>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:destLongitude-val is deprecated.  Use sim-msg:destLongitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:destLongitude-val is deprecated.  Use real-msg:destLongitude instead.")
   (destLongitude m))
 
 (cl:ensure-generic-function 'destAltitude-val :lambda-list '(m))
 (cl:defmethod destAltitude-val ((m <TelemetryUpdate>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:destAltitude-val is deprecated.  Use sim-msg:destAltitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:destAltitude-val is deprecated.  Use real-msg:destAltitude instead.")
   (destAltitude m))
 
 (cl:ensure-generic-function 'groundSpeed-val :lambda-list '(m))
 (cl:defmethod groundSpeed-val ((m <TelemetryUpdate>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:groundSpeed-val is deprecated.  Use sim-msg:groundSpeed instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:groundSpeed-val is deprecated.  Use real-msg:groundSpeed instead.")
   (groundSpeed m))
 
 (cl:ensure-generic-function 'targetBearing-val :lambda-list '(m))
 (cl:defmethod targetBearing-val ((m <TelemetryUpdate>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:targetBearing-val is deprecated.  Use sim-msg:targetBearing instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:targetBearing-val is deprecated.  Use real-msg:targetBearing instead.")
   (targetBearing m))
 
 (cl:ensure-generic-function 'currentWaypointIndex-val :lambda-list '(m))
 (cl:defmethod currentWaypointIndex-val ((m <TelemetryUpdate>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:currentWaypointIndex-val is deprecated.  Use sim-msg:currentWaypointIndex instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:currentWaypointIndex-val is deprecated.  Use real-msg:currentWaypointIndex instead.")
   (currentWaypointIndex m))
 
 (cl:ensure-generic-function 'distanceToDestination-val :lambda-list '(m))
 (cl:defmethod distanceToDestination-val ((m <TelemetryUpdate>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-msg:distanceToDestination-val is deprecated.  Use sim-msg:distanceToDestination instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-msg:distanceToDestination-val is deprecated.  Use real-msg:distanceToDestination instead.")
   (distanceToDestination m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <TelemetryUpdate>) ostream)
   "Serializes a message object of type '<TelemetryUpdate>"
@@ -350,10 +350,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<TelemetryUpdate>)))
   "Returns string type for a message object of type '<TelemetryUpdate>"
-  "sim/TelemetryUpdate")
+  "real/TelemetryUpdate")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'TelemetryUpdate)))
   "Returns string type for a message object of type 'TelemetryUpdate"
-  "sim/TelemetryUpdate")
+  "real/TelemetryUpdate")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<TelemetryUpdate>)))
   "Returns md5sum for a message object of type '<TelemetryUpdate>"
   "53cd950963d7a5c403c785f8c0a2ffa7")

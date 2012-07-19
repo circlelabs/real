@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/eric/ros_workspace/sim/src/visualization.cpp
+/home/eric/ros_workspace/real/src/visualization.cpp
 stdio.h
 -
 ros/ros.h
 -
 visualization_msgs/Marker.h
 -
-sim/TelemetryUpdate.h
-/home/eric/ros_workspace/sim/src/sim/TelemetryUpdate.h
+real/TelemetryUpdate.h
+/home/eric/ros_workspace/real/src/real/TelemetryUpdate.h
 
 /opt/ros/fuerte/include/XmlRpcDecl.h
 ros/macros.h
@@ -754,7 +754,7 @@ geometry_msgs/Point.h
 std_msgs/ColorRGBA.h
 -
 
-msg_gen/cpp/include/sim/TelemetryUpdate.h
+msg_gen/cpp/include/real/TelemetryUpdate.h
 string
 -
 vector
@@ -764,17 +764,17 @@ map
 ostream
 -
 ros/serialization.h
-msg_gen/cpp/include/sim/ros/serialization.h
+msg_gen/cpp/include/real/ros/serialization.h
 ros/builtin_message_traits.h
-msg_gen/cpp/include/sim/ros/builtin_message_traits.h
+msg_gen/cpp/include/real/ros/builtin_message_traits.h
 ros/message_operations.h
-msg_gen/cpp/include/sim/ros/message_operations.h
+msg_gen/cpp/include/real/ros/message_operations.h
 ros/time.h
-msg_gen/cpp/include/sim/ros/time.h
+msg_gen/cpp/include/real/ros/time.h
 ros/macros.h
-msg_gen/cpp/include/sim/ros/macros.h
+msg_gen/cpp/include/real/ros/macros.h
 ros/assert.h
-msg_gen/cpp/include/sim/ros/assert.h
+msg_gen/cpp/include/real/ros/assert.h
 std_msgs/Header.h
-msg_gen/cpp/include/sim/std_msgs/Header.h
+msg_gen/cpp/include/real/std_msgs/Header.h
 

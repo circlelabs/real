@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package sim-srv)
+(cl:in-package real-srv)
 
 
 ;//! \htmlinclude CreateSimulatedPlane-request.msg.html
@@ -40,31 +40,31 @@
 (cl:defmethod cl:initialize-instance :after ((m <CreateSimulatedPlane-request>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'CreateSimulatedPlane-request)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<CreateSimulatedPlane-request> is deprecated: use sim-srv:CreateSimulatedPlane-request instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<CreateSimulatedPlane-request> is deprecated: use real-srv:CreateSimulatedPlane-request instead.")))
 
 (cl:ensure-generic-function 'startingLatitude-val :lambda-list '(m))
 (cl:defmethod startingLatitude-val ((m <CreateSimulatedPlane-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:startingLatitude-val is deprecated.  Use sim-srv:startingLatitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:startingLatitude-val is deprecated.  Use real-srv:startingLatitude instead.")
   (startingLatitude m))
 
 (cl:ensure-generic-function 'startingLongitude-val :lambda-list '(m))
 (cl:defmethod startingLongitude-val ((m <CreateSimulatedPlane-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:startingLongitude-val is deprecated.  Use sim-srv:startingLongitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:startingLongitude-val is deprecated.  Use real-srv:startingLongitude instead.")
   (startingLongitude m))
 
 (cl:ensure-generic-function 'startingAltitude-val :lambda-list '(m))
 (cl:defmethod startingAltitude-val ((m <CreateSimulatedPlane-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:startingAltitude-val is deprecated.  Use sim-srv:startingAltitude instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:startingAltitude-val is deprecated.  Use real-srv:startingAltitude instead.")
   (startingAltitude m))
 
 (cl:ensure-generic-function 'startingBearing-val :lambda-list '(m))
 (cl:defmethod startingBearing-val ((m <CreateSimulatedPlane-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:startingBearing-val is deprecated.  Use sim-srv:startingBearing instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:startingBearing-val is deprecated.  Use real-srv:startingBearing instead.")
   (startingBearing m))
 
 (cl:ensure-generic-function 'requestedID-val :lambda-list '(m))
 (cl:defmethod requestedID-val ((m <CreateSimulatedPlane-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:requestedID-val is deprecated.  Use sim-srv:requestedID instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:requestedID-val is deprecated.  Use real-srv:requestedID instead.")
   (requestedID m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <CreateSimulatedPlane-request>) ostream)
   "Serializes a message object of type '<CreateSimulatedPlane-request>"
@@ -160,10 +160,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<CreateSimulatedPlane-request>)))
   "Returns string type for a service object of type '<CreateSimulatedPlane-request>"
-  "sim/CreateSimulatedPlaneRequest")
+  "real/CreateSimulatedPlaneRequest")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'CreateSimulatedPlane-request)))
   "Returns string type for a service object of type 'CreateSimulatedPlane-request"
-  "sim/CreateSimulatedPlaneRequest")
+  "real/CreateSimulatedPlaneRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<CreateSimulatedPlane-request>)))
   "Returns md5sum for a message object of type '<CreateSimulatedPlane-request>"
   "f4229a3b0a6dc585aeb2c4ece67a1b3c")
@@ -209,11 +209,11 @@
 (cl:defmethod cl:initialize-instance :after ((m <CreateSimulatedPlane-response>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'CreateSimulatedPlane-response)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<CreateSimulatedPlane-response> is deprecated: use sim-srv:CreateSimulatedPlane-response instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<CreateSimulatedPlane-response> is deprecated: use real-srv:CreateSimulatedPlane-response instead.")))
 
 (cl:ensure-generic-function 'planeID-val :lambda-list '(m))
 (cl:defmethod planeID-val ((m <CreateSimulatedPlane-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:planeID-val is deprecated.  Use sim-srv:planeID instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:planeID-val is deprecated.  Use real-srv:planeID instead.")
   (planeID m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <CreateSimulatedPlane-response>) ostream)
   "Serializes a message object of type '<CreateSimulatedPlane-response>"
@@ -232,10 +232,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<CreateSimulatedPlane-response>)))
   "Returns string type for a service object of type '<CreateSimulatedPlane-response>"
-  "sim/CreateSimulatedPlaneResponse")
+  "real/CreateSimulatedPlaneResponse")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'CreateSimulatedPlane-response)))
   "Returns string type for a service object of type 'CreateSimulatedPlane-response"
-  "sim/CreateSimulatedPlaneResponse")
+  "real/CreateSimulatedPlaneResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<CreateSimulatedPlane-response>)))
   "Returns md5sum for a message object of type '<CreateSimulatedPlane-response>"
   "f4229a3b0a6dc585aeb2c4ece67a1b3c")
@@ -263,4 +263,4 @@
   'CreateSimulatedPlane-response)
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'CreateSimulatedPlane)))
   "Returns string type for a service object of type '<CreateSimulatedPlane>"
-  "sim/CreateSimulatedPlane")
+  "real/CreateSimulatedPlane")

@@ -73,16 +73,16 @@ int main(int argc, char **argv) {
 	return 0;
 }
 
-void telemetryCallback(const real::TelemetryUpdate::ConstPtr &msg) {	
+void telemetryCallback(const real::TelemetryUpdate::ConstPtr &msg)
+{	
 	int planeID = msg->planeID;
-
-	/* Instantiate services and get planeID. */
+	/* Instantiate services for use later, and get planeID*/
 	real::GoToWaypoint goToWaypointSrv;
 	real::GoToWaypoint goToWaypointSrv2;
 	real::RequestWaypointInfo requestWaypointInfoSrv;
 	
 
-	/* Request this plane's current normal destination. */
+	/* Request this plane's current normal destination */
 	requestWaypointInfoSrv.request.planeID = planeID;
 	requestWaypointInfoSrv.request.isAvoidanceWaypoint = false;
 	requestWaypointInfoSrv.request.positionInQueue = 0;
@@ -92,29 +92,36 @@ void telemetryCallback(const real::TelemetryUpdate::ConstPtr &msg) {
 		return;
 	}
 
-	/* If the plane has reached its current destination, move on to the next destination waypoint. This does not set
-    the destination	of the plane object in the map "planes". */
+	/* If the plane has reached its current destination, move onto the 
+	next destination waypoint. This does not set the destination
+	of the plane object in the map "planes." */
 	if (findDistance(msg->currentLatitude, msg->currentLongitude, 
 					requestWaypointInfoSrv.response.latitude, 
 					requestWaypointInfoSrv.response.longitude) < COLLISION_THRESHOLD){
 
-		/* Request next normal destination */
+		/* request next normal destination */
 		requestWaypointInfoSrv.request.positionInQueue = 1;
 
-		if (!requestWaypointInfoClient.call(requestWaypointInfoSrv)) {
+		if (!requestWaypointInfoClient.call(requestWaypointInfoSrv)){
 			ROS_ERROR("Did not recieve a response from the coordinator");
 			return;
 		}
 	}
 
 
-	/* If the plane is not in our map of planes and has destination waypoints, then add it as a new plane to our map of planes. */
+	/* If the plane is not in our map of planes and has destination
+	waypoints, then add it as a new plane to our map of planes. 
+	
+	Else if the plane is not in our map of planes and does not
+	have waypoints, return and do nothing more. */
 	if (planes.find(planeID) == planes.end() && msg->currentWaypointIndex != -1){ 
-		/* This is a new plane, so create a new planeObject and give it the appropriate information. */
+		/* This is a new plane, so create a new planeObject and 
+		give it the appropriate information */
 		real::PlaneObject newPlane(MPS_SPEED, *msg); 
-		planes[planeID] = newPlane; //put the new plane in the map
+		planes[planeID] = newPlane; /* put the new plane into the map */
 
-		/* Update the destination of the PlaneObject with the value found with the requestWaypointInfoSrv call. */
+		/* Update the destination of the PlaneObject with the value 
+		found with the requestWaypointInfoSrv call */
 		real::waypoint newDest; 
 		newDest.latitude = requestWaypointInfoSrv.response.latitude;
 		newDest.longitude = requestWaypointInfoSrv.response.longitude;
@@ -122,16 +129,20 @@ void telemetryCallback(const real::TelemetryUpdate::ConstPtr &msg) {
 
 		planes[planeID].setDestination(newDest);
 	}
-    /* Else if the plane is not in our map of planes and does not have waypoints, return and do nothing more. */
 	else if (planes.find(planeID) == planes.end()) 
+		/* New plane without waypoint set */
 		return; 
-    
+	
 
-	/* Note: The requestWaypointInfo service returns a waypoint of -1000, -1000 when the UAV cannot retrieve a
-    destination from queue. */
+	/* Note: The requestWaypointInfo service returns a waypoint of 
+	-1000, -1000 when the UAV cannot retrieve a destination from queue.
 
-	/* If the plane has no waypoint to go to, put it far from all others. */
-	if (requestWaypointInfoSrv.response.latitude == -1000){ //plane has no waypoints to go to
+	If the plane has no waypoint to go to, put it far from all others.
+
+	Or, if the plane does have a waypoint to go to, update the plane 
+	with new position and destination received from requestWaypointInfoSrv
+	response*/
+	if (requestWaypointInfoSrv.response.latitude == -1000){ /* plane has no waypoints to go to */
 		/* Remove in real flights*/
 		planes[planeID].setCurrentLoc(-1000,-1000,400);
 		/* update the time of last update for this plane to acknowledge 
@@ -139,35 +150,70 @@ void telemetryCallback(const real::TelemetryUpdate::ConstPtr &msg) {
 		planes[planeID].updateTime(); 
 		return; 
 	}
-    
-	/* Else (the plane does have a waypoint to go to) update the plane with new position and destination received from
-    requestWaypointInfoSrv response. */
-	else {
-		planes[planeID].update(*msg); //update plane with new position
+	else{
+		planes[planeID].update(*msg); /* update plane with new position */
+
 		real::waypoint newDest;
 
 		newDest.latitude = requestWaypointInfoSrv.response.latitude;
 		newDest.longitude = requestWaypointInfoSrv.response.longitude;
 		newDest.altitude = requestWaypointInfoSrv.response.altitude;
 
-		planes[planeID].setDestination(newDest); //update plane destination
+		planes[planeID].setDestination(newDest); /* update plane destination */
 	}
 
-    /* This code calls the collision avoidance algorithm and determines if collision avoidance maneuvers should be
-    taken. Returns a waypoint for the plane to go to. */	
-    real::waypoint newWaypoint = findNewWaypoint(planes[planeID], planes);
 
-    if (planes[planeID].getDestination().latitude == newWaypont.latitude &&
-        planes[planeID].getDestination().longitude == newWaypont.longitude) continue;
+	/* This line of code calls the collision avoidance algorithm 
+	and determines if there should be collision avoidance 
+	maneuvers taken. Returns a waypointContainer which contains new waypoints for 
+	the current plane and the threatening plane. If there is no threatening plane, 
+	*/	
+	real::waypointContainer bothNewWaypoints = findNewWaypoint(planes[planeID], planes);
+	
+	/* If plane2 has a new waypoint to go to, then send it there!*/
+	real::waypoint newWaypoint = bothNewWaypoints.plane1WP;
 
-    /* Fill in goToWaypointSrv request with new waypoint information. */
-    goToWaypointSrv.request.planeID = planeID;
-    goToWaypointSrv.request.latitude = newWaypoint.latitude;
-    goToWaypointSrv.request.longitude = newWaypoint.longitude;
-    goToWaypointSrv.request.altitude = newWaypoint.altitude;
-    goToWaypointSrv.request.isAvoidanceManeuver = true; 
-    goToWaypointSrv.request.isNewQueue = true;
-
+	if (bothNewWaypoints.plane2ID >= 0) {
+		real::waypoint newWaypoint2 = bothNewWaypoints.plane2WP;
+		goToWaypointSrv.request.planeID = bothNewWaypoints.plane2ID;
+		goToWaypointSrv.request.latitude = newWaypoint2.latitude;
+		goToWaypointSrv.request.longitude = newWaypoint2.longitude;
+		goToWaypointSrv.request.altitude = newWaypoint2.altitude;
+		goToWaypointSrv.request.isAvoidanceManeuver = true; 
+		goToWaypointSrv.request.isNewQueue = true;
+	
+		
+		if (goToWaypointClient.call(goToWaypointSrv)){
+			count++;
+			ROS_INFO("Received response from service request %d", (count-1));
+		}
+		else{
+			ROS_ERROR("Did not receive response");
+		}
+		
 	}
+	
+	if ((requestWaypointInfoSrv.response.longitude == newWaypoint.longitude) 
+		&& (requestWaypointInfoSrv.response.latitude == newWaypoint.latitude)) {
+	return;
+	}	
 
+	/* Fill in goToWaypointSrv request with new waypoint information*/
+	goToWaypointSrv.request.planeID = planeID;
+	goToWaypointSrv.request.latitude = newWaypoint.latitude;
+	goToWaypointSrv.request.longitude = newWaypoint.longitude;
+	goToWaypointSrv.request.altitude = newWaypoint.altitude;
+	goToWaypointSrv.request.isAvoidanceManeuver = true; 
+	goToWaypointSrv.request.isNewQueue = true;
+
+
+	if (goToWaypointClient.call(goToWaypointSrv)){
+		count++;
+		ROS_INFO("Received response from service request %d", (count-1));
+	}
+	else{
+		ROS_ERROR("Did not receive response");
+	}
+	
 }
+

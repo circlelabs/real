@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package sim-srv)
+(cl:in-package real-srv)
 
 
 ;//! \htmlinclude DeleteSimulatedPlane-request.msg.html
@@ -20,11 +20,11 @@
 (cl:defmethod cl:initialize-instance :after ((m <DeleteSimulatedPlane-request>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'DeleteSimulatedPlane-request)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<DeleteSimulatedPlane-request> is deprecated: use sim-srv:DeleteSimulatedPlane-request instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<DeleteSimulatedPlane-request> is deprecated: use real-srv:DeleteSimulatedPlane-request instead.")))
 
 (cl:ensure-generic-function 'planeID-val :lambda-list '(m))
 (cl:defmethod planeID-val ((m <DeleteSimulatedPlane-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:planeID-val is deprecated.  Use sim-srv:planeID instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:planeID-val is deprecated.  Use real-srv:planeID instead.")
   (planeID m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <DeleteSimulatedPlane-request>) ostream)
   "Serializes a message object of type '<DeleteSimulatedPlane-request>"
@@ -43,10 +43,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<DeleteSimulatedPlane-request>)))
   "Returns string type for a service object of type '<DeleteSimulatedPlane-request>"
-  "sim/DeleteSimulatedPlaneRequest")
+  "real/DeleteSimulatedPlaneRequest")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'DeleteSimulatedPlane-request)))
   "Returns string type for a service object of type 'DeleteSimulatedPlane-request"
-  "sim/DeleteSimulatedPlaneRequest")
+  "real/DeleteSimulatedPlaneRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<DeleteSimulatedPlane-request>)))
   "Returns md5sum for a message object of type '<DeleteSimulatedPlane-request>"
   "fc45473ddd329d08f1fc4a2e24e8bc0f")
@@ -84,11 +84,11 @@
 (cl:defmethod cl:initialize-instance :after ((m <DeleteSimulatedPlane-response>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'DeleteSimulatedPlane-response)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<DeleteSimulatedPlane-response> is deprecated: use sim-srv:DeleteSimulatedPlane-response instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<DeleteSimulatedPlane-response> is deprecated: use real-srv:DeleteSimulatedPlane-response instead.")))
 
 (cl:ensure-generic-function 'error-val :lambda-list '(m))
 (cl:defmethod error-val ((m <DeleteSimulatedPlane-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:error-val is deprecated.  Use sim-srv:error instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:error-val is deprecated.  Use real-srv:error instead.")
   (error m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <DeleteSimulatedPlane-response>) ostream)
   "Serializes a message object of type '<DeleteSimulatedPlane-response>"
@@ -113,10 +113,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<DeleteSimulatedPlane-response>)))
   "Returns string type for a service object of type '<DeleteSimulatedPlane-response>"
-  "sim/DeleteSimulatedPlaneResponse")
+  "real/DeleteSimulatedPlaneResponse")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'DeleteSimulatedPlane-response)))
   "Returns string type for a service object of type 'DeleteSimulatedPlane-response"
-  "sim/DeleteSimulatedPlaneResponse")
+  "real/DeleteSimulatedPlaneResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<DeleteSimulatedPlane-response>)))
   "Returns md5sum for a message object of type '<DeleteSimulatedPlane-response>"
   "fc45473ddd329d08f1fc4a2e24e8bc0f")
@@ -144,4 +144,4 @@
   'DeleteSimulatedPlane-response)
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'DeleteSimulatedPlane)))
   "Returns string type for a service object of type '<DeleteSimulatedPlane>"
-  "sim/DeleteSimulatedPlane")
+  "real/DeleteSimulatedPlane")

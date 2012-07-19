@@ -1,13 +1,13 @@
 FILE(REMOVE_RECURSE
-  "src/sim/msg"
-  "src/sim/srv"
+  "src/real/msg"
+  "src/real/srv"
   "msg_gen"
   "srv_gen"
   "msg_gen"
   "srv_gen"
   "CMakeFiles/coordinator.dir/src/coordinator.o"
-  "CMakeFiles/coordinator.dir/src/sim/PlaneCoordinator.o"
-  "CMakeFiles/coordinator.dir/src/sim/standardDefs.o"
+  "CMakeFiles/coordinator.dir/src/real/PlaneCoordinator.o"
+  "CMakeFiles/coordinator.dir/src/real/standardDefs.o"
   "bin/coordinator.pdb"
   "bin/coordinator"
 )

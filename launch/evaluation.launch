@@ -1,5 +1,4 @@
 <launch>
-
 	<node name="collisionAvoidance" pkg="real" type="collisionAvoidance"/>
 	<node name="coordinator" pkg="real" type="coordinator"/>
 	<node name="KMLCreator" pkg="real" type="KMLCreator" output="screen" />

@@ -1,12 +1,12 @@
 FILE(REMOVE_RECURSE
-  "src/sim/msg"
-  "src/sim/srv"
+  "src/real/msg"
+  "src/real/srv"
   "msg_gen"
   "srv_gen"
   "msg_gen"
   "srv_gen"
   "CMakeFiles/ControlMenu.dir/src/ControlMenu.o"
-  "CMakeFiles/ControlMenu.dir/src/sim/standardDefs.o"
+  "CMakeFiles/ControlMenu.dir/src/real/standardDefs.o"
   "bin/ControlMenu.pdb"
   "bin/ControlMenu"
 )

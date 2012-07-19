@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package sim-srv)
+(cl:in-package real-srv)
 
 
 ;//! \htmlinclude RequestPlaneID-request.msg.html
@@ -20,11 +20,11 @@
 (cl:defmethod cl:initialize-instance :after ((m <RequestPlaneID-request>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'RequestPlaneID-request)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<RequestPlaneID-request> is deprecated: use sim-srv:RequestPlaneID-request instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<RequestPlaneID-request> is deprecated: use real-srv:RequestPlaneID-request instead.")))
 
 (cl:ensure-generic-function 'requestedID-val :lambda-list '(m))
 (cl:defmethod requestedID-val ((m <RequestPlaneID-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:requestedID-val is deprecated.  Use sim-srv:requestedID instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:requestedID-val is deprecated.  Use real-srv:requestedID instead.")
   (requestedID m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <RequestPlaneID-request>) ostream)
   "Serializes a message object of type '<RequestPlaneID-request>"
@@ -43,10 +43,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<RequestPlaneID-request>)))
   "Returns string type for a service object of type '<RequestPlaneID-request>"
-  "sim/RequestPlaneIDRequest")
+  "real/RequestPlaneIDRequest")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'RequestPlaneID-request)))
   "Returns string type for a service object of type 'RequestPlaneID-request"
-  "sim/RequestPlaneIDRequest")
+  "real/RequestPlaneIDRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<RequestPlaneID-request>)))
   "Returns md5sum for a message object of type '<RequestPlaneID-request>"
   "58e09e6bef3056cafdf42d800c5df65f")
@@ -84,11 +84,11 @@
 (cl:defmethod cl:initialize-instance :after ((m <RequestPlaneID-response>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'RequestPlaneID-response)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<RequestPlaneID-response> is deprecated: use sim-srv:RequestPlaneID-response instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<RequestPlaneID-response> is deprecated: use real-srv:RequestPlaneID-response instead.")))
 
 (cl:ensure-generic-function 'planeID-val :lambda-list '(m))
 (cl:defmethod planeID-val ((m <RequestPlaneID-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:planeID-val is deprecated.  Use sim-srv:planeID instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:planeID-val is deprecated.  Use real-srv:planeID instead.")
   (planeID m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <RequestPlaneID-response>) ostream)
   "Serializes a message object of type '<RequestPlaneID-response>"
@@ -107,10 +107,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<RequestPlaneID-response>)))
   "Returns string type for a service object of type '<RequestPlaneID-response>"
-  "sim/RequestPlaneIDResponse")
+  "real/RequestPlaneIDResponse")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'RequestPlaneID-response)))
   "Returns string type for a service object of type 'RequestPlaneID-response"
-  "sim/RequestPlaneIDResponse")
+  "real/RequestPlaneIDResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<RequestPlaneID-response>)))
   "Returns md5sum for a message object of type '<RequestPlaneID-response>"
   "58e09e6bef3056cafdf42d800c5df65f")
@@ -138,4 +138,4 @@
   'RequestPlaneID-response)
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'RequestPlaneID)))
   "Returns string type for a service object of type '<RequestPlaneID>"
-  "sim/RequestPlaneID")
+  "real/RequestPlaneID")

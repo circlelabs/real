@@ -91,14 +91,14 @@ CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: /opt/ros/fuerte/stac
 CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: /opt/ros/fuerte/stacks/geometry/tf/include/tf/transform_broadcaster.h
 CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: /opt/ros/fuerte/stacks/geometry/tf/include/tf/transform_datatypes.h
 CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/cpp/include/tf/tfMessage.h
-CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: include/sim/planeObject.h
-CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: include/sim/ripna.h
-CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: include/sim/standardDefs.h
-CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: include/sim/standardFuncs.h
-CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: include/sim/vmath.h
-CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: msg_gen/cpp/include/sim/TelemetryUpdate.h
-CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: srv_gen/cpp/include/sim/GoToWaypoint.h
-CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: srv_gen/cpp/include/sim/RequestWaypointInfo.h
+CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: include/real/planeObject.h
+CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: include/real/ripna.h
+CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: include/real/standardDefs.h
+CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: include/real/standardFuncs.h
+CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: include/real/vmath.h
+CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: msg_gen/cpp/include/real/TelemetryUpdate.h
+CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: srv_gen/cpp/include/real/GoToWaypoint.h
+CMakeFiles/collisionAvoidance.dir/src/collisionAvoidance.o: srv_gen/cpp/include/real/RequestWaypointInfo.h
 
 CMakeFiles/collisionAvoidance.dir/src/planeObject.o: src/planeObject.cpp
 CMakeFiles/collisionAvoidance.dir/src/planeObject.o: /opt/ros/fuerte/include/XmlRpcDecl.h
@@ -156,13 +156,16 @@ CMakeFiles/collisionAvoidance.dir/src/planeObject.o: /opt/ros/fuerte/include/ros
 CMakeFiles/collisionAvoidance.dir/src/planeObject.o: /opt/ros/fuerte/include/ros/wall_timer_options.h
 CMakeFiles/collisionAvoidance.dir/src/planeObject.o: /opt/ros/fuerte/include/rosconsole/macros_generated.h
 CMakeFiles/collisionAvoidance.dir/src/planeObject.o: /opt/ros/fuerte/include/std_msgs/Header.h
-CMakeFiles/collisionAvoidance.dir/src/planeObject.o: include/sim/SimulatedPlane.h
-CMakeFiles/collisionAvoidance.dir/src/planeObject.o: include/sim/planeObject.h
-CMakeFiles/collisionAvoidance.dir/src/planeObject.o: include/sim/standardDefs.h
-CMakeFiles/collisionAvoidance.dir/src/planeObject.o: include/sim/standardFuncs.h
-CMakeFiles/collisionAvoidance.dir/src/planeObject.o: msg_gen/cpp/include/sim/Command.h
-CMakeFiles/collisionAvoidance.dir/src/planeObject.o: msg_gen/cpp/include/sim/TelemetryUpdate.h
-CMakeFiles/collisionAvoidance.dir/src/planeObject.o: srv_gen/cpp/include/sim/CreateSimulatedPlane.h
+CMakeFiles/collisionAvoidance.dir/src/planeObject.o: include/real/SimulatedPlane.h
+CMakeFiles/collisionAvoidance.dir/src/planeObject.o: include/real/planeObject.h
+CMakeFiles/collisionAvoidance.dir/src/planeObject.o: include/real/standardDefs.h
+CMakeFiles/collisionAvoidance.dir/src/planeObject.o: include/real/standardFuncs.h
+CMakeFiles/collisionAvoidance.dir/src/planeObject.o: msg_gen/cpp/include/real/Command.h
+CMakeFiles/collisionAvoidance.dir/src/planeObject.o: msg_gen/cpp/include/real/TelemetryUpdate.h
+CMakeFiles/collisionAvoidance.dir/src/planeObject.o: srv_gen/cpp/include/real/CreateSimulatedPlane.h
+
+CMakeFiles/collisionAvoidance.dir/src/real/standardDefs.o: src/real/standardDefs.cpp
+CMakeFiles/collisionAvoidance.dir/src/real/standardDefs.o: include/real/standardDefs.h
 
 CMakeFiles/collisionAvoidance.dir/src/ripna.o: src/ripna.cpp
 CMakeFiles/collisionAvoidance.dir/src/ripna.o: /opt/ros/fuerte/include/ros/assert.h
@@ -185,25 +188,22 @@ CMakeFiles/collisionAvoidance.dir/src/ripna.o: /opt/ros/fuerte/include/ros/time.
 CMakeFiles/collisionAvoidance.dir/src/ripna.o: /opt/ros/fuerte/include/ros/types.h
 CMakeFiles/collisionAvoidance.dir/src/ripna.o: /opt/ros/fuerte/include/rosconsole/macros_generated.h
 CMakeFiles/collisionAvoidance.dir/src/ripna.o: /opt/ros/fuerte/include/std_msgs/Header.h
-CMakeFiles/collisionAvoidance.dir/src/ripna.o: include/sim/SimulatedPlane.h
-CMakeFiles/collisionAvoidance.dir/src/ripna.o: include/sim/planeObject.h
-CMakeFiles/collisionAvoidance.dir/src/ripna.o: include/sim/ripna.h
-CMakeFiles/collisionAvoidance.dir/src/ripna.o: include/sim/standardDefs.h
-CMakeFiles/collisionAvoidance.dir/src/ripna.o: include/sim/standardFuncs.h
-CMakeFiles/collisionAvoidance.dir/src/ripna.o: include/sim/vmath.h
-CMakeFiles/collisionAvoidance.dir/src/ripna.o: msg_gen/cpp/include/sim/Command.h
-CMakeFiles/collisionAvoidance.dir/src/ripna.o: msg_gen/cpp/include/sim/TelemetryUpdate.h
-CMakeFiles/collisionAvoidance.dir/src/ripna.o: srv_gen/cpp/include/sim/CreateSimulatedPlane.h
-
-CMakeFiles/collisionAvoidance.dir/src/sim/standardDefs.o: src/sim/standardDefs.cpp
-CMakeFiles/collisionAvoidance.dir/src/sim/standardDefs.o: include/sim/standardDefs.h
+CMakeFiles/collisionAvoidance.dir/src/ripna.o: include/real/SimulatedPlane.h
+CMakeFiles/collisionAvoidance.dir/src/ripna.o: include/real/planeObject.h
+CMakeFiles/collisionAvoidance.dir/src/ripna.o: include/real/ripna.h
+CMakeFiles/collisionAvoidance.dir/src/ripna.o: include/real/standardDefs.h
+CMakeFiles/collisionAvoidance.dir/src/ripna.o: include/real/standardFuncs.h
+CMakeFiles/collisionAvoidance.dir/src/ripna.o: include/real/vmath.h
+CMakeFiles/collisionAvoidance.dir/src/ripna.o: msg_gen/cpp/include/real/Command.h
+CMakeFiles/collisionAvoidance.dir/src/ripna.o: msg_gen/cpp/include/real/TelemetryUpdate.h
+CMakeFiles/collisionAvoidance.dir/src/ripna.o: srv_gen/cpp/include/real/CreateSimulatedPlane.h
 
 CMakeFiles/collisionAvoidance.dir/src/standardFuncs.o: src/standardFuncs.cpp
-CMakeFiles/collisionAvoidance.dir/src/standardFuncs.o: include/sim/standardDefs.h
-CMakeFiles/collisionAvoidance.dir/src/standardFuncs.o: include/sim/standardFuncs.h
+CMakeFiles/collisionAvoidance.dir/src/standardFuncs.o: include/real/standardDefs.h
+CMakeFiles/collisionAvoidance.dir/src/standardFuncs.o: include/real/standardFuncs.h
 
 CMakeFiles/collisionAvoidance.dir/src/vmath.o: src/vmath.cpp
-CMakeFiles/collisionAvoidance.dir/src/vmath.o: include/sim/standardDefs.h
-CMakeFiles/collisionAvoidance.dir/src/vmath.o: include/sim/standardFuncs.h
-CMakeFiles/collisionAvoidance.dir/src/vmath.o: include/sim/vmath.h
+CMakeFiles/collisionAvoidance.dir/src/vmath.o: include/real/standardDefs.h
+CMakeFiles/collisionAvoidance.dir/src/vmath.o: include/real/standardFuncs.h
+CMakeFiles/collisionAvoidance.dir/src/vmath.o: include/real/vmath.h
 

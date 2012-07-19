@@ -58,13 +58,13 @@ CMakeFiles/evaluator.dir/src/evaluator.o: /opt/ros/fuerte/include/ros/wall_timer
 CMakeFiles/evaluator.dir/src/evaluator.o: /opt/ros/fuerte/include/ros/wall_timer_options.h
 CMakeFiles/evaluator.dir/src/evaluator.o: /opt/ros/fuerte/include/rosconsole/macros_generated.h
 CMakeFiles/evaluator.dir/src/evaluator.o: /opt/ros/fuerte/include/std_msgs/Header.h
-CMakeFiles/evaluator.dir/src/evaluator.o: include/sim/standardDefs.h
-CMakeFiles/evaluator.dir/src/evaluator.o: msg_gen/cpp/include/sim/TelemetryUpdate.h
-CMakeFiles/evaluator.dir/src/evaluator.o: srv_gen/cpp/include/sim/CreateSimulatedPlane.h
-CMakeFiles/evaluator.dir/src/evaluator.o: srv_gen/cpp/include/sim/DeleteSimulatedPlane.h
-CMakeFiles/evaluator.dir/src/evaluator.o: srv_gen/cpp/include/sim/LoadCourse.h
-CMakeFiles/evaluator.dir/src/evaluator.o: srv_gen/cpp/include/sim/SaveFlightData.h
+CMakeFiles/evaluator.dir/src/evaluator.o: include/real/standardDefs.h
+CMakeFiles/evaluator.dir/src/evaluator.o: msg_gen/cpp/include/real/TelemetryUpdate.h
+CMakeFiles/evaluator.dir/src/evaluator.o: srv_gen/cpp/include/real/CreateSimulatedPlane.h
+CMakeFiles/evaluator.dir/src/evaluator.o: srv_gen/cpp/include/real/DeleteSimulatedPlane.h
+CMakeFiles/evaluator.dir/src/evaluator.o: srv_gen/cpp/include/real/LoadCourse.h
+CMakeFiles/evaluator.dir/src/evaluator.o: srv_gen/cpp/include/real/SaveFlightData.h
 
-CMakeFiles/evaluator.dir/src/sim/standardDefs.o: src/sim/standardDefs.cpp
-CMakeFiles/evaluator.dir/src/sim/standardDefs.o: include/sim/standardDefs.h
+CMakeFiles/evaluator.dir/src/real/standardDefs.o: src/real/standardDefs.cpp
+CMakeFiles/evaluator.dir/src/real/standardDefs.o: include/real/standardDefs.h
 

@@ -1,13 +1,13 @@
 FILE(REMOVE_RECURSE
-  "src/sim/msg"
-  "src/sim/srv"
+  "src/real/msg"
+  "src/real/srv"
   "msg_gen"
   "srv_gen"
   "msg_gen"
   "srv_gen"
   "CMakeFiles/simulator.dir/src/simulator.o"
-  "CMakeFiles/simulator.dir/src/sim/SimulatedPlane.o"
-  "CMakeFiles/simulator.dir/src/sim/standardDefs.o"
+  "CMakeFiles/simulator.dir/src/real/SimulatedPlane.o"
+  "CMakeFiles/simulator.dir/src/real/standardDefs.o"
   "bin/simulator.pdb"
   "bin/simulator"
 )

@@ -524,21 +524,6 @@ src/planeObject.s:
 .PHONY : src/planeObject.s
 
 # target to build an object file
-src/ripna.o:
-	$(MAKE) -f CMakeFiles/collisionAvoidance.dir/build.make CMakeFiles/collisionAvoidance.dir/src/ripna.o
-.PHONY : src/ripna.o
-
-# target to preprocess a source file
-src/ripna.i:
-	$(MAKE) -f CMakeFiles/collisionAvoidance.dir/build.make CMakeFiles/collisionAvoidance.dir/src/ripna.i
-.PHONY : src/ripna.i
-
-# target to generate assembly for a file
-src/ripna.s:
-	$(MAKE) -f CMakeFiles/collisionAvoidance.dir/build.make CMakeFiles/collisionAvoidance.dir/src/ripna.s
-.PHONY : src/ripna.s
-
-# target to build an object file
 src/real/PlaneCoordinator.o:
 	$(MAKE) -f CMakeFiles/coordinator.dir/build.make CMakeFiles/coordinator.dir/src/real/PlaneCoordinator.o
 .PHONY : src/real/PlaneCoordinator.o
@@ -555,17 +540,17 @@ src/real/PlaneCoordinator.s:
 
 # target to build an object file
 src/real/SimulatedPlane.o:
-	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/src/real/SimulatedPlane.o
+	$(MAKE) -f CMakeFiles/simulator.dir/build.make CMakeFiles/simulator.dir/src/real/SimulatedPlane.o
 .PHONY : src/real/SimulatedPlane.o
 
 # target to preprocess a source file
 src/real/SimulatedPlane.i:
-	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/src/real/SimulatedPlane.i
+	$(MAKE) -f CMakeFiles/simulator.dir/build.make CMakeFiles/simulator.dir/src/real/SimulatedPlane.i
 .PHONY : src/real/SimulatedPlane.i
 
 # target to generate assembly for a file
 src/real/SimulatedPlane.s:
-	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/src/real/SimulatedPlane.s
+	$(MAKE) -f CMakeFiles/simulator.dir/build.make CMakeFiles/simulator.dir/src/real/SimulatedPlane.s
 .PHONY : src/real/SimulatedPlane.s
 
 # target to build an object file
@@ -574,7 +559,7 @@ src/real/standardDefs.o:
 	$(MAKE) -f CMakeFiles/collisionAvoidance.dir/build.make CMakeFiles/collisionAvoidance.dir/src/real/standardDefs.o
 	$(MAKE) -f CMakeFiles/coordinator.dir/build.make CMakeFiles/coordinator.dir/src/real/standardDefs.o
 	$(MAKE) -f CMakeFiles/evaluator.dir/build.make CMakeFiles/evaluator.dir/src/real/standardDefs.o
-	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/src/real/standardDefs.o
+	$(MAKE) -f CMakeFiles/simulator.dir/build.make CMakeFiles/simulator.dir/src/real/standardDefs.o
 .PHONY : src/real/standardDefs.o
 
 # target to preprocess a source file
@@ -583,7 +568,7 @@ src/real/standardDefs.i:
 	$(MAKE) -f CMakeFiles/collisionAvoidance.dir/build.make CMakeFiles/collisionAvoidance.dir/src/real/standardDefs.i
 	$(MAKE) -f CMakeFiles/coordinator.dir/build.make CMakeFiles/coordinator.dir/src/real/standardDefs.i
 	$(MAKE) -f CMakeFiles/evaluator.dir/build.make CMakeFiles/evaluator.dir/src/real/standardDefs.i
-	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/src/real/standardDefs.i
+	$(MAKE) -f CMakeFiles/simulator.dir/build.make CMakeFiles/simulator.dir/src/real/standardDefs.i
 .PHONY : src/real/standardDefs.i
 
 # target to generate assembly for a file
@@ -592,23 +577,38 @@ src/real/standardDefs.s:
 	$(MAKE) -f CMakeFiles/collisionAvoidance.dir/build.make CMakeFiles/collisionAvoidance.dir/src/real/standardDefs.s
 	$(MAKE) -f CMakeFiles/coordinator.dir/build.make CMakeFiles/coordinator.dir/src/real/standardDefs.s
 	$(MAKE) -f CMakeFiles/evaluator.dir/build.make CMakeFiles/evaluator.dir/src/real/standardDefs.s
-	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/src/real/standardDefs.s
+	$(MAKE) -f CMakeFiles/simulator.dir/build.make CMakeFiles/simulator.dir/src/real/standardDefs.s
 .PHONY : src/real/standardDefs.s
 
 # target to build an object file
-src/Simulator.o:
-	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/src/Simulator.o
-.PHONY : src/Simulator.o
+src/ripna.o:
+	$(MAKE) -f CMakeFiles/collisionAvoidance.dir/build.make CMakeFiles/collisionAvoidance.dir/src/ripna.o
+.PHONY : src/ripna.o
 
 # target to preprocess a source file
-src/Simulator.i:
-	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/src/Simulator.i
-.PHONY : src/Simulator.i
+src/ripna.i:
+	$(MAKE) -f CMakeFiles/collisionAvoidance.dir/build.make CMakeFiles/collisionAvoidance.dir/src/ripna.i
+.PHONY : src/ripna.i
 
 # target to generate assembly for a file
-src/Simulator.s:
-	$(MAKE) -f CMakeFiles/Simulator.dir/build.make CMakeFiles/Simulator.dir/src/Simulator.s
-.PHONY : src/Simulator.s
+src/ripna.s:
+	$(MAKE) -f CMakeFiles/collisionAvoidance.dir/build.make CMakeFiles/collisionAvoidance.dir/src/ripna.s
+.PHONY : src/ripna.s
+
+# target to build an object file
+src/simulator.o:
+	$(MAKE) -f CMakeFiles/simulator.dir/build.make CMakeFiles/simulator.dir/src/simulator.o
+.PHONY : src/simulator.o
+
+# target to preprocess a source file
+src/simulator.i:
+	$(MAKE) -f CMakeFiles/simulator.dir/build.make CMakeFiles/simulator.dir/src/simulator.i
+.PHONY : src/simulator.i
+
+# target to generate assembly for a file
+src/simulator.s:
+	$(MAKE) -f CMakeFiles/simulator.dir/build.make CMakeFiles/simulator.dir/src/simulator.s
+.PHONY : src/simulator.s
 
 # target to build an object file
 src/standardFuncs.o:
@@ -707,9 +707,6 @@ help:
 	@echo "... src/planeObject.o"
 	@echo "... src/planeObject.i"
 	@echo "... src/planeObject.s"
-	@echo "... src/ripna.o"
-	@echo "... src/ripna.i"
-	@echo "... src/ripna.s"
 	@echo "... src/real/PlaneCoordinator.o"
 	@echo "... src/real/PlaneCoordinator.i"
 	@echo "... src/real/PlaneCoordinator.s"
@@ -719,9 +716,12 @@ help:
 	@echo "... src/real/standardDefs.o"
 	@echo "... src/real/standardDefs.i"
 	@echo "... src/real/standardDefs.s"
-	@echo "... src/Simulator.o"
-	@echo "... src/Simulator.i"
-	@echo "... src/Simulator.s"
+	@echo "... src/ripna.o"
+	@echo "... src/ripna.i"
+	@echo "... src/ripna.s"
+	@echo "... src/simulator.o"
+	@echo "... src/simulator.i"
+	@echo "... src/simulator.s"
 	@echo "... src/standardFuncs.o"
 	@echo "... src/standardFuncs.i"
 	@echo "... src/standardFuncs.s"

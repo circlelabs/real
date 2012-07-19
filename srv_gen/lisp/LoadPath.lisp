@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package sim-srv)
+(cl:in-package real-srv)
 
 
 ;//! \htmlinclude LoadPath-request.msg.html
@@ -25,16 +25,16 @@
 (cl:defmethod cl:initialize-instance :after ((m <LoadPath-request>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'LoadPath-request)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<LoadPath-request> is deprecated: use sim-srv:LoadPath-request instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<LoadPath-request> is deprecated: use real-srv:LoadPath-request instead.")))
 
 (cl:ensure-generic-function 'filename-val :lambda-list '(m))
 (cl:defmethod filename-val ((m <LoadPath-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:filename-val is deprecated.  Use sim-srv:filename instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:filename-val is deprecated.  Use real-srv:filename instead.")
   (filename m))
 
 (cl:ensure-generic-function 'planeID-val :lambda-list '(m))
 (cl:defmethod planeID-val ((m <LoadPath-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:planeID-val is deprecated.  Use sim-srv:planeID instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:planeID-val is deprecated.  Use real-srv:planeID instead.")
   (planeID m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <LoadPath-request>) ostream)
   "Serializes a message object of type '<LoadPath-request>"
@@ -67,10 +67,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<LoadPath-request>)))
   "Returns string type for a service object of type '<LoadPath-request>"
-  "sim/LoadPathRequest")
+  "real/LoadPathRequest")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'LoadPath-request)))
   "Returns string type for a service object of type 'LoadPath-request"
-  "sim/LoadPathRequest")
+  "real/LoadPathRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<LoadPath-request>)))
   "Returns md5sum for a message object of type '<LoadPath-request>"
   "4061d08328adc7152ed27430e0829f81")
@@ -110,11 +110,11 @@
 (cl:defmethod cl:initialize-instance :after ((m <LoadPath-response>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'LoadPath-response)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name sim-srv:<LoadPath-response> is deprecated: use sim-srv:LoadPath-response instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name real-srv:<LoadPath-response> is deprecated: use real-srv:LoadPath-response instead.")))
 
 (cl:ensure-generic-function 'error-val :lambda-list '(m))
 (cl:defmethod error-val ((m <LoadPath-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader sim-srv:error-val is deprecated.  Use sim-srv:error instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader real-srv:error-val is deprecated.  Use real-srv:error instead.")
   (error m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <LoadPath-response>) ostream)
   "Serializes a message object of type '<LoadPath-response>"
@@ -139,10 +139,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<LoadPath-response>)))
   "Returns string type for a service object of type '<LoadPath-response>"
-  "sim/LoadPathResponse")
+  "real/LoadPathResponse")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'LoadPath-response)))
   "Returns string type for a service object of type 'LoadPath-response"
-  "sim/LoadPathResponse")
+  "real/LoadPathResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<LoadPath-response>)))
   "Returns md5sum for a message object of type '<LoadPath-response>"
   "4061d08328adc7152ed27430e0829f81")
@@ -170,4 +170,4 @@
   'LoadPath-response)
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'LoadPath)))
   "Returns string type for a service object of type '<LoadPath>"
-  "sim/LoadPath")
+  "real/LoadPath")

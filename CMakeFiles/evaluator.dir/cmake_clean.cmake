@@ -1,12 +1,12 @@
 FILE(REMOVE_RECURSE
-  "src/sim/msg"
-  "src/sim/srv"
+  "src/real/msg"
+  "src/real/srv"
   "msg_gen"
   "srv_gen"
   "msg_gen"
   "srv_gen"
   "CMakeFiles/evaluator.dir/src/evaluator.o"
-  "CMakeFiles/evaluator.dir/src/sim/standardDefs.o"
+  "CMakeFiles/evaluator.dir/src/real/standardDefs.o"
   "bin/evaluator.pdb"
   "bin/evaluator"
 )
